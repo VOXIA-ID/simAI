@@ -54,7 +54,7 @@ ENV DATABASE_URL=${DATABASE_URL}
 ARG NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 
-RUN bun run build
+RUN bun run build --filter=sim --filter=sim
 
 # ========================================
 # Runner Stage: Run the actual app
